@@ -47,19 +47,19 @@ sudo apt-get -y install aptitude
 password=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 password2=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 
-echo $STRING6
+#echo $STRING6
 #if [[ ("$install_fail2ban" == "y" || "$install_fail2ban" == "Y" || "$install_fail2ban" == "") ]]; then
-  cd ~
-  sudo aptitude -y install fail2ban
-  sudo service fail2ban restart
+ # cd ~
+ # sudo aptitude -y install fail2ban
+ # sudo service fail2ban restart
 #fi
 #if [[ ("$UFW" == "y" || "$UFW" == "Y" || "$UFW" == "") ]]; then
-  sudo apt-get install ufw
-  sudo ufw default deny incoming
-  sudo ufw default allow outgoing
-  sudo ufw allow ssh
-  sudo ufw allow 3595/tcp
-  sudo ufw --force enable
+#  sudo apt-get install ufw
+#  sudo ufw default deny incoming
+#  sudo ufw default allow outgoing
+#  sudo ufw allow ssh
+#  sudo ufw allow 3595/tcp
+#  sudo ufw --force enable
 #fi
 
 #Install Daemon
